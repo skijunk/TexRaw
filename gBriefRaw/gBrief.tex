@@ -1,4 +1,5 @@
-\documentclass[11pt,ngerman,utf8]{g-brief}
+\documentclass[12pt]{g-brief}
+\usepackage[utf8]{inputenc}
 
 \lochermarke
 \faltmarken
@@ -8,43 +9,51 @@
 
 \Name                {MeineName}
 \Strasse             {MeineStrasse}
-\Zusatz              {}
-\RetourAdresse       {}
-\Ort                 {99533 Weitewelt}
-\Land                {Deutschland}
+\Zusatz              {MeinAdressZusatz}
+\RetourAdresse       {MeinName, MeineStraße, MeinePlz Stadt}
+\Ort                 { MeinePlz Stadt}
+\Land                {MeinLand}
 
 \Telefon             {+49\ 000\ 00000}
 \Telefax             {+49\ 000\ 00000}
 \Telex               {}
-\HTTP                {http://www.example.com}
-\EMail               {raffzahn@example.com}
+\HTTP                {MeineWebsite}
+\EMail               {Mine@myHost.com}
 
-\Bank                {Bankhaus Skrupellos \& Co.}
-\BLZ                 {000.000.00}
+%% BLZ->BIC
+%% Kontonr->Iban
+
+\renewcommand{\blztext}{\footnotesize BIC}
+\renewcommand{\kontotext}{\footnotesize IBAN}
+
+\Bank                {MeineBank}
 \Konto               {000.000.000}
+\BLZ                 {000.000.00}
 
-\Unterschrift        {Otto Raffzahn}
+\Unterschrift        {MeineUnterschrift}
 
-\Postvermerk         {E I N S C H R E I B E N}
-\Adresse             {Frau\\
-                      Else Mittellos\\
-                      Finsterweg 12\\
-                      \\
-                      D-93456 Tiefeschlucht
-                      }
+\Postvermerk         {z. B. E I N S C H R E I B E N}
+\Adresse             {zuHänden\\
+                      Firma\\
+                      Straße Nr.\\
+                      Postfach\\
+                      Land \\
+                      Plz Stadt}
 
-\Betreff             {Zahlung Ihrer Miete}
+\Betreff             {Betreff}
 
 \Datum               {\today}
-\IhrZeichen          {}
-\IhrSchreiben        {}
-\MeinZeichen         {OR}
+\IhrZeichen          {IhrZeichen}
+\IhrSchreiben        {IhrSchreiben}
+\MeinZeichen         {MeinZeichen}
 
-\Anrede              {Sehr geehrte Frau Mittellos,}
-\Gruss               {Mit freundlichen Gr\"u\ss{}en}{1cm}
+\Anrede              {Sehr geehrte Damen und Herren\\
+                      Sehr geehrte Frau\\
+                      Sehr geehrter Herr}
+\Gruss               {Mit freundlichen Grüßen}{1cm} %%Abstand kann umgeschrieben werden
 
-\Anlagen             {}
-\Verteiler           {}
+\Anlagen             {Anlage}
+\Verteiler           {Verteiler}
 
 \begin{document}
 \begin{g-brief}
